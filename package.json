@@ -1,0 +1,23 @@
+{
+  "name": "request-header-parser-microservice",
+  "version": "1.0.0",
+  "description": "Request Header Parser Microservice",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irene-fabbri/request-header-parser-microservice.git"
+  },
+  "author": "Irene Fabbri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irene-fabbri/request-header-parser-microservice/issues"
+  },
+  "homepage": "https://github.com/irene-fabbri/request-header-parser-microservice#readme",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
