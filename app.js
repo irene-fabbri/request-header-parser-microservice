@@ -6,6 +6,23 @@ app.set('trust proxy', true);
 
 app.use(cors());
 
+app.use((req, res, next) => {
+  if (['GET'].includes(req.method)) {
+  } else {
+    return res.status(405).send({
+      "errors": [
+          {
+              "status": "405",
+              "code": "method-not-allowed",     
+              "title": "Method not allowed",
+              "detail": "Request metod MUST be GET"
+          }
+      ]
+  });
+}
+  next();
+});
+
 // set response Content-Type to be 'application/vnd.api+json'
 app.use((req, res, next) => {
   res.setHeader('Content-Type', 'application/vnd.api+json');
