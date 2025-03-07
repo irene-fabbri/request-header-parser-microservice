@@ -34,7 +34,6 @@ app.get('/api/whoami',  (req,res) => {
   const ip = req.ip || "IP not found";
   const language = req.get('accept-language') ? req.get('accept-language').split(',')[0] : 'Preferred language not found';  // Extract first preferred language
   const software = req.get('user-agent') || 'User-Agent not found';  // Extract User-Agent or default message
-
   res.status(200).json({
     "data": {
         "type": "client-info",
